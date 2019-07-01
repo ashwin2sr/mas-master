@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Multi Agent System</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link href="jquery-ui.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="bootstrap.css">
+      <link href="style.css" rel="stylesheet">
+      <script type="text/javascript" src="jquery.js"></script>
+      <script src="jquery-ui.js"></script>
+      <script type="text/javascript" src="jqSimpleConnect.min.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+   </head>
+   <body>
+      <nav class="navbar navbar-default toolbox">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Multi Agent System</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <li class="agentItem draggable" ><a href="#" >Agent</a></li>
+                  <li class="softItem draggable"><a href="#">Soft Goal</a></li>
+                  <li class="operationItem draggable"><a href="#">Operational Goal</a></li>
+               </ul>
+               <form class="navbar-form navbar-left option-option agent-option">
+                  <input class="form-control mr-sm-2" type="Name" placeholder="Name" >
+                  <button class="btn btn-info my-2 my-sm-0 save"  >Save</button>
+                  <button class="btn btn-danger my-2 my-sm-0 delete" >Delete</button>
+               </form>
+               <form class="navbar-form navbar-left option-option soft-option">
+                  <input class="name form-control mr-sm-2" type="Name" placeholder="Name" >
+                  <input class="weight form-control mr-sm-2" type="Name" placeholder="Weight" >
+                  <input class="connection form-control mr-sm-2" type="Name" placeholder="Connection" >
+                  <button class="btn btn-info my-2 my-sm-0 save"  >Save</button>
+                  <button class="btn btn-danger my-2 my-sm-0 delete" >Delete</button>
+               </form>
+               <form class="navbar-form navbar-left option-option operation-option">
+                  <input class="name form-control mr-sm-2" type="Name" placeholder="Name" >
+                  <input class="connection form-control mr-sm-2" type="Name" placeholder="Connection" >
+                  <button class="btn btn-info my-2 my-sm-0 save"  >Save</button>
+                  <button class="btn btn-danger my-2 my-sm-0 delete" >Delete</button>
+               </form>
+               <form class="navbar-form navbar-left option-option contribution-option">
+               	  <input class="contribution form-control mr-sm-2" type="Name" placeholder="Contribution" >
+                  <button class="btn btn-info my-2 my-sm-0 save" >Save</button>
+               </form>
+               <form class="navbar-form navbar-right">
+                  <button type="submit" class="btn btn-primary">Calculate</button>
+               </form>
+            </div>
+         </div>
+      </nav>
+      <div class="workArea">
+      </div>
+   </body>
+</html>

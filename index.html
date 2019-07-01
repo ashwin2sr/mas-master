@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multi Agent System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default toolbox">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Multi Agent System</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="navbar-form navbar-left">
+            <a href="#" class="btn btn-primary agentItem" ><span class="glyphicon glyphicon-plus"></span> Add Agent</a>
+          </div>
+          
+          <ul class="nav navbar-nav">
+            <li class="softItem draggable"><a href="#">Soft Goal</a></li>
+            <li class="operationItem draggable"><a href="#">Operational Goal</a></li>
+          </ul>
+          <div class="navbar-form navbar-right">
+            <button type="submit" class="btn btn-primary calculateBtn">Calculate</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="workArea">
+      
+      <!--         <div class="temporaryForm">
+        <input type="text" name="" placeholder="Agent Name" class="agent-class">
+        <input type="text" name="" placeholder="System Plan" class="System-class">
+        <input type="text" name="" placeholder="Leaf System Plan" class="Leaf-class-one">
+        <input type="text" name="" placeholder="Dependancy" class="Leaf-class-one-dependancy">
+        <input type="text" name="" placeholder="Leaf System Plan" class="Leaf-class-two">
+        <input type="text" name="" placeholder="Operational Goal" class="operation-class-one">
+        <input type="text" name="" placeholder="Operational Goal" class="operation-class-two">
+      </div> -->
+    </div>
+    
+    <div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title modalContent agentContent" id="exampleModalLabel">Create An Agent</h4>
+            <h4 class="modal-title modalContent softContent" id="exampleModalLabel">Update Soft Goal</h4>
+            <h4 class="modal-title modalContent operationContent" id="exampleModalLabel">Update Operational Goal</h4>
+            <h4 class="modal-title modalContent connectionContent" id="exampleModalLabel">Update Score</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group modalContent agentContent">
+                <label for="recipient-name " class="control-label">Name:</label>
+                <input type="text" class="form-control agentName" id="recipient-name">
+              </div>
+              <div class="form-group modalContent agentContent">
+                <label for="recipient-name " class="control-label">Main Goal:</label>
+                <input type="text" class="form-control mainGoalName" id="recipient-name">
+              </div>
+              <div class="form-group modalContent softContent actorContent operationContent">
+                <label for="sel1">Select Actor (select one):</label>
+              <select class="actor-select selectpicker form-control"></select>
+            </div>
+            <div class="form-group modalContent softContent">
+              <label for="recipient-name " class="control-label">Name:</label>
+              <input type="text" class="form-control softName" id="recipient-name">
+            </div>
+            <div class="form-group modalContent softContent softContentWeight">
+              <label for="recipient-name " class="control-label">Weight:</label>
+              <input type="text" class="form-control softWeight" id="recipient-name">
+            </div>
+            <div class="form-group modalContent softContent ">
+                <label for="sel1">Main Goal (select one):</label>
+              <select class="main-select selectpicker form-control"></select>
+            </div>
+
+            <div class="form-group modalContent operationContent">
+              <label for="recipient-name " class="control-label">Name:</label>
+              <input type="text" class="form-control operationName" id="recipient-name">
+            </div>
+            <div class="form-group modalContent operationContent">
+              <label for="sel1">Select Connection (Hold Ctrl to select more than one)</label>
+            <select class="soft-select selectpicker form-control" multiple></select>
+          </div>
+          <div class="form-group modalContent connectionContent">
+            <label for="recipient-name " class="control-label">Contribution:</label>
+            <input type="text" class="form-control connectionValue" id="recipient-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btnDelete modalContent softContent" >Delete</button>
+        <button type="button" class="btn btn-success updateModal">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.connections.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
